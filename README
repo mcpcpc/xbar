@@ -1,0 +1,26 @@
+xbar - a tiny XCB status bar
+
+An incredibly lightweight information bar, designed to print important
+real-time system metrics. Beyond foreground and background colors, xbar
+offers limited customization for a distraction-free user experience.
+
+INSTALL
+=======
+
+Building and installing from source:
+    git clone http://github.com/mcpcpc/xbar
+    cd xbar
+    make
+    sudo make install
+
+EXAMPLES
+========
+
+Create shell script to update xbar (e.g. ~/bar.sh):
+    while true; do
+        xbar "$(date)"
+        sleep 0.1s
+    done
+
+Add shell script to your X server init script:
+    echo "~/bar.sh &" > ~/.xinitrc
